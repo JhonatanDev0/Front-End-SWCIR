@@ -2,20 +2,25 @@
   <div class="page-header clear-filter" filter-color="none">
     <div
       class="page-header-image"
-      style="background-image: url('img/login.jpg')"  
+      style="background-image: url('img/login.jpg')"
     ></div>
     <div class="content">
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
             <div slot="header" class="logo-container">
-              <img v-lazy="'img/now-logo.png'" alt="logo do site" style="max-width: 100%" />
+              <img
+                v-lazy="'img/now-logo.png'"
+                alt="logo do site"
+                style="max-width: 100%"
+              />
             </div>
 
             <fg-input
               class="no-border input-lg"
               addon-left-icon="now-ui-icons users_circle-08"
-              placeholder="Nome Completo..."
+              placeholder="Nome..."
+              v-model="name"
             >
             </fg-input>
 
@@ -23,20 +28,7 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons ui-1_email-85"
               placeholder="E-mail..."
-            >
-            </fg-input>
-            
-            <fg-input
-              class="no-border input-lg"
-              addon-left-icon="now-ui-icons ui-1_email-85"
-              placeholder="Confirmar E-mail..."
-            >
-            </fg-input>
-
-            <fg-input
-              class="no-border input-lg"
-              addon-left-icon="now-ui-icons users_single-02"
-              placeholder="Username..."
+              v-model="email"
             >
             </fg-input>
 
@@ -44,6 +36,7 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons ui-1_lock-circle-open"
               placeholder="Senha..."
+              v-model="password"
             >
             </fg-input>
 
@@ -53,7 +46,8 @@
                   href="#/profile"
                   class="btn btn-info btn-round btn-lg btn-block"
                   style="text-shadow: 2px 2px black"
-                  >Começar</a
+                  v-on:click="enviarDados"
+                  >Enviar</a
                 >
               </div>
               <div class="pull-left">
@@ -63,7 +57,12 @@
               </div>
               <div class="pull-right">
                 <h6>
-                  <a href="#/login" class="link footer-link" style="text-shadow: 2px 2px black">Entrar</a>
+                  <a
+                    href="#/login"
+                    class="link footer-link"
+                    style="text-shadow: 2px 2px black"
+                    >Entrar</a
+                  >
                 </h6>
               </div>
             </template>
@@ -74,15 +73,40 @@
   </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput } from '@/components';
+import { Card, Button, FormGroupInput } from "@/components";
+import userServices from "../services/users";
 export default {
-  name: 'login-page',
-  bodyClass: 'login-page',
+  name: "login-page",
+  bodyClass: "login-page",
   components: {
     Card,
     [Button.name]: Button,
-    [FormGroupInput.name]: FormGroupInput
-  }
+    [FormGroupInput.name]: FormGroupInput,
+  },
+  data() {
+    return {
+      name: "",
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    enviarDados(e) {
+      e.preventDefault();
+      console.log(e);
+      const body = {
+        name: this.name,
+        email: this.email,
+        password: this.password,
+      };
+      userServices
+        .cadastrarUsuario(body)
+        .then((r) => {
+          alert("Dados enviados");
+        })
+        .catch((r) => alert.error("Dados não enviados"));
+    },
+  },
 };
 </script>
 <style></style>
