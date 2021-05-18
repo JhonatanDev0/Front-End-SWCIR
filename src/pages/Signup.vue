@@ -4,7 +4,7 @@
       class="page-header-image"
       style="background-image: url('img/login.jpg')"
     ></div>
-    <div class="content">
+    <div class="content" method='POST'> 
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
@@ -36,9 +36,15 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons ui-1_lock-circle-open"
               placeholder="Senha..."
+              type="password"
+              id="senha"
               v-model="password"
             >
             </fg-input>
+            <!-- <input
+              type="checkbox"
+              onclick="mostrarOcultarSenha"
+            />Mostrar Senha -->
 
             <template slot="raw-content">
               <div class="card-footer text-center">
@@ -46,7 +52,7 @@
                   href="#/profile"
                   class="btn btn-info btn-round btn-lg btn-block"
                   style="text-shadow: 2px 2px black"
-                  v-on:click="enviarDados"
+                  onclick="enviarDados"
                   >Enviar</a
                 >
               </div>
@@ -103,11 +109,19 @@ export default {
         .cadastrarUsuario(body)
         .then((r) => {
           alert("Dados enviados");
-          window.location.href = 'http://localhost:8080/#/login';
+          window.location.href = "http://localhost:8080/#/login";
         })
         .catch((r) => alert.error("Dados não enviados"));
     },
   },
+  /*mostrarOcultarSenha() {
+    var senha = document.getElementById("senha");
+    if (senha.type == "password") {
+      senha.type = "text";
+    } else {
+      senha.type = "password";
+    }
+  },*/
 };
 </script>
 <style></style>
