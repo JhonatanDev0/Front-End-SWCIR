@@ -103,6 +103,7 @@ export default {
         .cadastrarUsuario(body)
         .then((r) => {
           alert("Dados enviados");
+          window.location.href = 'http://localhost:8080/#/login';
         })
         .catch((r) => alert.error("Dados não enviados"));
     },
