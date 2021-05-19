@@ -43,7 +43,7 @@
             </fg-input>
             <!-- <input
               type="checkbox"
-              onclick="mostrarOcultarSenha"
+              v-on:onclick="mostrarOcultarSenha"
             />Mostrar Senha -->
 
             <template slot="raw-content">
@@ -52,7 +52,7 @@
                   href="#/profile"
                   class="btn btn-info btn-round btn-lg btn-block"
                   style="text-shadow: 2px 2px black"
-                  onclick="enviarDados"
+                  v-on:click="enviarDados"
                   >Enviar</a
                 >
               </div>
