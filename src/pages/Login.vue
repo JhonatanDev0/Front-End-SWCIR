@@ -42,7 +42,7 @@
               </div>
               <div class="pull-right">
                 <h6>
-                  <a href="#/landing" class="link footer-link" style="text-shadow: 2px 2px black">Criar Conta</a>
+                  <a href="#/Signup" class="link footer-link" style="text-shadow: 2px 2px black">Criar Conta</a>
                 </h6>
               </div>
             </template>

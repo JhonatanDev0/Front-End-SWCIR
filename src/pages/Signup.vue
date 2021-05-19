@@ -20,6 +20,8 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons users_circle-08"
               placeholder="Nome..."
+              type="text"
+              aria-required="true"
               v-model="name"
             >
             </fg-input>
@@ -28,6 +30,8 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons ui-1_email-85"
               placeholder="E-mail..."
+              aria-required="true"
+              type="email"
               v-model="email"
             >
             </fg-input>
@@ -36,6 +40,7 @@
               class="no-border input-lg"
               addon-left-icon="now-ui-icons ui-1_lock-circle-open"
               placeholder="Senha..."
+              aria-required="true"
               type="password"
               id="senha"
               v-model="password"
