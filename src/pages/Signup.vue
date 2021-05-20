@@ -4,7 +4,7 @@
       class="page-header-image"
       style="background-image: url('img/login.jpg')"
     ></div>
-    <div class="content" method='POST'> 
+    <div class="content" method="POST">
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
@@ -46,8 +46,8 @@
               v-model="password"
             >
             </fg-input>
-            <button
-              v-on:click="mostrarOcultarSenha">Mostrar Senha</button>
+            <input type="checkbox" v-on:click="mostrarOcultarSenha" /> Mostrar
+            Senha
 
             <template slot="raw-content">
               <div class="card-footer text-center">
@@ -84,7 +84,7 @@
 <script>
 import { Card, FormGroupInput } from "@/components";
 import userServices from "../services/users";
-import Button from '../components/Button.vue';
+import Button from "../components/Button.vue";
 export default {
   name: "login-page",
   bodyClass: "login-page",
@@ -119,15 +119,14 @@ export default {
         .catch((r) => alert.error("Dados não enviados"));
     },
     mostrarOcultarSenha() {
-    var senha = document.getElementById("senha");
-    if (senha.type == "password") {
-      senha.type = "text";
-    } else {
-      senha.type = "password";
-    }
+      var senha = document.getElementById("senha");
+      if (senha.type == "password") {
+        senha.type = "text";
+      } else {
+        senha.type = "password";
+      }
+    },
   },
-  },
-  
 };
 </script>
 <style></style>

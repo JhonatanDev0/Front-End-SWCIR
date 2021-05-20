@@ -32,7 +32,7 @@
         <nav-link to="/login">
           <i class="now-ui-icons users_single-02"></i> Login
         </nav-link>
-        <nav-link to="/landing">
+        <nav-link to="/Signup">
           <i class="now-ui-icons ui-1_simple-add"></i> Cadastro
         </nav-link>
       </drop-down>
