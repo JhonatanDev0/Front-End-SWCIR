@@ -46,10 +46,8 @@
               v-model="password"
             >
             </fg-input>
-            <!-- <input
-              type="checkbox"
-              v-on:onclick="mostrarOcultarSenha"
-            />Mostrar Senha -->
+            <button
+              v-on:click="mostrarOcultarSenha">Mostrar Senha</button>
 
             <template slot="raw-content">
               <div class="card-footer text-center">
@@ -84,14 +82,16 @@
   </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput } from "@/components";
+import { Card, FormGroupInput } from "@/components";
 import userServices from "../services/users";
+import Button from '../components/Button.vue';
 export default {
   name: "login-page",
   bodyClass: "login-page",
   components: {
     Card,
-    [Button.name]: Button,
+    //Button,
+    //[Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput,
   },
   data() {
@@ -118,15 +118,16 @@ export default {
         })
         .catch((r) => alert.error("Dados não enviados"));
     },
-  },
-  /*mostrarOcultarSenha() {
+    mostrarOcultarSenha() {
     var senha = document.getElementById("senha");
     if (senha.type == "password") {
       senha.type = "text";
     } else {
       senha.type = "password";
     }
-  },*/
+  },
+  },
+  
 };
 </script>
 <style></style>
