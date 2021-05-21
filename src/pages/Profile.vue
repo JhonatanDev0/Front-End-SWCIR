@@ -41,6 +41,51 @@
       </div>
     </div>
     <div>
+      <h4 class="title text-center">Alíquota 2021</h4>
+      <p style="width: 50% !important; margin: auto">
+        <b
+          >A alíquota é usada para calcular o valor final que uma pessoa ou
+          empresa pagará de imposto.</b
+        >
+      </p>
+      <table class="styled-table" border="3" style="width: 50% !important; margin: auto;">
+        <thead>
+        <tr>
+          <td><b>BASE DE CÁLCULO (R$)</b></td>
+          <td><b>ALÍQUOTA (%)</b></td>
+          <td><b>PARCELA A DEDUZIR DO IRPF</b></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Até 1.903,98</td>
+          <td>isento</td>
+          <td>isento</td>
+        </tr>
+        <tr>
+          <td>De 1.903,99 até 2.826,65</td>
+          <td>7,5%</td>
+          <td>R$142,80</td>
+        </tr>
+        <tr>
+          <td>De 2.826,66 até 3.751,05</td>
+          <td>15%</td>
+          <td>R$354,80</td>
+        </tr>
+        <tr>
+          <td>De 3.751,06 até 4.664,68</td>
+          <td>22,5%</td>
+          <td>R$636,13</td>
+        </tr>
+        <tr>
+          <td>Acima de 4.664,68</td>
+          <td>27,5%</td>
+          <td>R$869,36</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
       <h4 class="title text-center">Meus Dados</h4>
     </div>
     <signup-form></signup-form>
@@ -169,51 +214,7 @@
         </div>
       </div>
     </div>
-    <div>
-      <h4 class="title text-center">Alíquota 2021</h4>
-      <p style="width: 50% !important; margin: auto">
-        <b
-          >A alíquota é usada para calcular o valor final que uma pessoa ou
-          empresa pagará de imposto.</b
-        >
-      </p>
-      <table class="styled-table" border="3" style="width: 50% !important; margin: auto">
-        <thead>
-        <tr>
-          <td><b>BASE DE CÁLCULO (R$)</b></td>
-          <td><b>ALÍQUOTA (%)</b></td>
-          <td><b>PARCELA A DEDUZIR DO IRPF</b></td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Até 1.903,98</td>
-          <td>isento</td>
-          <td>isento</td>
-        </tr>
-        <tr>
-          <td>De 1.903,99 até 2.826,65</td>
-          <td>7,5%</td>
-          <td>R$142,80</td>
-        </tr>
-        <tr>
-          <td>De 2.826,66 até 3.751,05</td>
-          <td>15%</td>
-          <td>R$354,80</td>
-        </tr>
-        <tr>
-          <td>De 3.751,06 até 4.664,68</td>
-          <td>22,5%</td>
-          <td>R$636,13</td>
-        </tr>
-        <tr>
-          <td>Acima de 4.664,68</td>
-          <td>27,5%</td>
-          <td>R$869,36</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+    
     <br>
   </div>
 </template>
