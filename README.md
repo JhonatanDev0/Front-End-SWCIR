@@ -1,8 +1,8 @@
-# [SWCIR - Sistema Web para Cálculo de Imposto de Renda]
+# SWCIR - Sistema Web para Cálculo de Imposto de Renda
 
 ![Product Gif](src/assets/github/product.gif)
 
-**[SWCIR]** propõe a facilidade de organizar informações de documentos para declaração de imposto de renda de pessoa física, propondo assim a diminuição e complicação em ter que guardar inúmeros documentos para que se possa fazer a declaração. Além da facilidade em armazenar é possível que o usuário deste sistema gerencie suas informações e possa enviá-lo para o contador.
+**SWCIR** propõe a facilidade de organizar informações de documentos para declaração de imposto de renda de pessoa física, propondo assim a diminuição e complicação em ter que guardar inúmeros documentos para que se possa fazer a declaração. Além da facilidade em armazenar é possível que o usuário deste sistema gerencie suas informações e possa enviá-lo para o contador.
 
 Tecnologia Usada no Front: 
 [Vue.js (2.5)](https://vuejs.org/) Framework para desenvolvimento.
